@@ -53,8 +53,8 @@ sub run_experiment{
 	return \%hash;
 }
 
-my $hashref=&run_experiment(100000,5,5);
-#my $hashref=&run_experiment(100000,1,30);
+#my $hashref=&run_experiment(100000,5,5);
+my $hashref=&run_experiment(100000,1,30);
 
 foreach my $key (sort {$a<=>$b} keys $hashref){
 	print "$key : $$hashref{$key}\n";
