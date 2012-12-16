@@ -7,7 +7,10 @@ a fountain pen - Damage is 1d30 (average 15).
 run_experiment($sample_size,$x,$y);
 
 so to test bobbit knife: run_experiment(100000,5,5)
+see results: https://github.com/borgified/dice_rolls/blob/master/output_knife
+
 so to test fountain pen: run_experiment(100000,1,30)
+see results: https://github.com/borgified/dice_rolls/blob/master/output_pen
 
 so out of 100000 tries, the damage that resulted most often is 15. it comes up around 12k times or about 12% of the time. other damages like 13,14 and 16,17 come up around 10-11% of the time. so adding all these together you have a pretty healthy 50%+ chance of hitting btwn 13-17.
 
