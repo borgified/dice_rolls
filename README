@@ -12,7 +12,7 @@ see results: https://github.com/borgified/dice_rolls/blob/master/output_knife
 so to test fountain pen: run_experiment(100000,1,30)
 see results: https://github.com/borgified/dice_rolls/blob/master/output_pen
 
-so out of 100000 tries, the damage that resulted most often is 15. it comes up around 12k times or about 12% of the time. other damages like 13,14 and 16,17 come up around 10-11% of the time. so adding all these together you have a pretty healthy 50%+ chance of hitting btwn 13-17.
+for the bobbit knife, out of 100000 tries, the damage that resulted most often is 15. it comes up around 12k times or about 12% of the time. other damages like 13,14 and 16,17 come up around 10-11% of the time. so adding all these together you have a pretty healthy 50%+ chance of hitting btwn 13-17.
 
 for the fountain pen, since it is 1d30, it's pretty even across the board. in other words, you are just as likely to hit for 1 as you are to hit for 30, so out of 100k tries, you'd hit for 1 around ~3300 times. likewise, you hit for 2 around ~3300 times also and so on. so let's see what our chances are of hitting btwn 13-17 damage. 3300*5/100k = 16.5%
 
