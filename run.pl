@@ -53,10 +53,50 @@ sub run_experiment{
 	return \%hash;
 }
 
-my $hashref=&run_experiment(100000,5,5);
+#my $hashref=&run_experiment(100000,5,5);
 #my $hashref=&run_experiment(100000,1,30);
 
-foreach my $key (sort {$a<=>$b} keys $hashref){
-	print "$key : $$hashref{$key}\n";
+#foreach my $key (sort {$a<=>$b} keys $hashref){
+#	print "$key : $$hashref{$key}\n";
+#}
+
+sub damage_test{
+#damage test will run 2 experiments side by side and see which reaches X amount of damage first
+	my $pen = 0;
+	my $knife = 0;
+	my $max_damage=40000;
+
+	while(($pen<$max_damage) && ($knife<$max_damage)){
+		$pen=$pen+&xdy(1,30);
+		$knife=$knife+&xdy(5,5);
+		#print "pen damage: $pen\t knife damage: $knife\n";
+	}
+	if($pen<$knife){
+		return "knife";
+	}elsif($pen>$knife){
+		return "pen";
+	}else{
+		return "draw";
+	}
 }
 
+sub run_experiment2{
+	my %results;
+	my $count=shift @_;
+	my $x=0;
+
+	$results{'pen'}=0;
+	$results{'knife'}=0;
+	$results{'draw'}=0;
+
+	while($x<$count){
+		my $winner=&damage_test;
+		$results{$winner}=$results{$winner}+1;
+		$x++;
+	}
+	print "pen: $results{'pen'}\n";
+	print "knife: $results{'knife'}\n";
+	print "draw: $results{'draw'}\n";
+}
+
+&run_experiment2(100);
