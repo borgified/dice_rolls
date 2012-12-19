@@ -2,7 +2,7 @@ answers the age old question when you have both:
 
 a bobbit knife - Damage is 5d5 (average 15).
 
-a fountain pen - Damage is 1d30 (average 15).
+a fountain pen - Damage is 1d30 (average 15) [actually 15.5].
 
 run_experiment($sample_size,$x,$y);
 
